@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfect Practice – Gruppe beitreten</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+           display:flex; min-height:100vh; align-items:center; justify-content:center;
+           background:#f2f1ee; color:#1c1c1e; }
+    @media (prefers-color-scheme: dark) { body { background:#111; color:#f2f2f7; } }
+    .card { max-width:360px; margin:20px; padding:28px; text-align:center;
+            background:rgba(127,127,127,.08); border-radius:20px; }
+    h1 { font-size:1.4rem; margin:.2rem 0 .6rem; }
+    .code { font:600 1.6rem ui-monospace,monospace; letter-spacing:2px; margin:14px 0; }
+    p { color:#8a8a8e; font-size:.95rem; line-height:1.4; }
+    a.btn { display:inline-block; margin-top:18px; padding:14px 22px; border-radius:14px;
+            background:#C89B3F; color:#fff; font-weight:600; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Gruppe beitreten</h1>
+    <p>Öffne diesen Link auf deinem iPhone – Perfect Practice fragt dich dann, ob du der Gruppe beitreten willst.</p>
+    <div class="code" id="code">–</div>
+    <p>App noch nicht installiert?</p>
+    <!-- TODO: echte App-Store-URL eintragen -->
+    <a class="btn" href="https://apps.apple.com/app/perfect-practice">Im App Store laden</a>
+  </div>
+  <script>
+    const g = new URLSearchParams(location.search).get('g');
+    if (g) document.getElementById('code').textContent = g;
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "34NW764282.com.josuabraun.perfectpractice",
+        "paths": [ "/join", "/join*" ]
+      },
+      {
+        "appID": "9NXFXZL273.com.josuabraun.perfectpractice",
+        "paths": [ "/join", "/join*" ]
+      }
+    ]
+  }
+}
